@@ -72,8 +72,8 @@
                 if (Frame.Raycast(touch.position.x, touch.position.y, raycastFilter, out hit))
                 {
                     var anchor = hit.Trackable.CreateAnchor(hit.Pose);
-                    //----------- Menu-----------
-                    menuObject = Instantiate(m_instanciables.MenuPrefab, hit.Pose.position, Quaternion.identity);
+                //----------- Menu-----------
+                menuObject = Instantiate(m_instanciables.MenuPrefab, hit.Pose.position, Quaternion.identity);
                     menuObject.SetActive(false);
                     menuObject.transform.LookAt(m_references.FirstPersonCamera.transform.position);
                     menuObject.transform.eulerAngles = new Vector3(0, menuObject.transform.eulerAngles.y, 0);
