@@ -1,11 +1,12 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManagerMain : MonoBehaviour
 {
 
-    //public PrincipalARController principalARController;
+    public HelloARController helloARController;
     private void Update()
     {
         m_states.m_current.Update();
@@ -45,7 +46,7 @@ public class GameManagerMain : MonoBehaviour
         m_states.m_playing = ScriptableObject.CreateInstance<GMS_Playing>().Init(this) as GMS_Playing;
         m_states.m_inactive = ScriptableObject.CreateInstance<GMS_Inactive>().Init(this) as GMS_Inactive;
 
-        m_states.m_current = m_states.m_inactive;
+        m_states.m_current = m_states.m_scanningroom;
         SM_GoToScanningRoom();
     }
 

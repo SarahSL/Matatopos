@@ -11,7 +11,6 @@ public class GMS_Inactive : GMS_ControllerState
 
     public override void Exit()
     {
-        throw new System.NotImplementedException();
     }
 
     public override void Update()
