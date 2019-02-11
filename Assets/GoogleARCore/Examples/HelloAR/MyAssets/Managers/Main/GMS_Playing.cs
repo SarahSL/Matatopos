@@ -4,19 +4,22 @@ using UnityEngine;
 
 public class GMS_Playing : GMS_ControllerState
 {
+    public GameManagerGameplay gameMangaerGameplay;
     public override void Enter()
     {
-        throw new System.NotImplementedException();
+        gameMangaerGameplay = FindObjectOfType<GameManagerGameplay>();
     }
-
     public override void Exit()
     {
-        throw new System.NotImplementedException();
-    }
 
+    }
     public override void Update()
     {
-        throw new System.NotImplementedException();
+        if (gameMangaerGameplay.m_states.m_current == gameMangaerGameplay.m_states.m_inactive)
+        {
+            gameMangaerGameplay.SMG_GoToInitGame();
+        }
+
     }
-    
+
 }
