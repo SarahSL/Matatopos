@@ -18,6 +18,11 @@ public class GPS_Playing_Waiting : GPS_GamePlayingState
     public override void Exit()
     {
         inputManager.TouchAction -= SelectAndy;
+        GameObject[] andys = GameObject.FindGameObjectsWithTag("Andy");
+        foreach(GameObject andy in andys)
+        {
+            andy.SetActive(false);
+        }
     }
     public override void Update()
     {

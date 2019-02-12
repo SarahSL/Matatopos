@@ -22,7 +22,6 @@ public class PoolAndy : MonoBehaviour
         if(points.Length == 0)
         {
             points = GameObject.FindGameObjectsWithTag("Point");
-            Debug.Log(points.Length + "POINTS LEEEEEEEEEEEEEEEEEEEEEEEEEEEEEENGTH ");
             CreateFirstAndy();
         }
 
@@ -56,7 +55,11 @@ public class PoolAndy : MonoBehaviour
             count = 5;
         }
     }
-
+    public void GameOver()
+    {
+        pointsUsed = new bool[20];
+        points = null;
+    }
     private int RandomPos()
     {
         int result = UnityEngine.Random.Range(1, 20);
