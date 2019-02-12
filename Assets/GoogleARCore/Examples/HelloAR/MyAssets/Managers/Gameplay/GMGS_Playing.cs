@@ -9,16 +9,16 @@ public class GMGS_Playing : GMGS_GameplayControllerStates
     private float gameTime;
     private Text gameTimeText;
 
- /*   public GameManagerPlaying gameManagerPlaying;
-    public TruckAgent[] truckAgents;
+  public GameManagerPlaying gameManagerPlaying;
+ /*   public TruckAgent[] truckAgents;
     public WarehouseAgent[] warehouseAgents;
     public PoolTruckController poolTruck;*/
     
 
     public override void Enter()
     {
-        /* gameManagerPlaying = FindObjectOfType<GameManagerPlaying>();
-         poolTruck = FindObjectOfType<PoolTruckController>();
+       gameManagerPlaying = FindObjectOfType<GameManagerPlaying>();
+         /*poolTruck = FindObjectOfType<PoolTruckController>();
          poolTruck.CreateFirstTruckController();
 
          gameManagerPlaying.poolTruck = poolTruck;
@@ -71,7 +71,7 @@ public class GMGS_Playing : GMGS_GameplayControllerStates
         }
         else
         {
-            //gameManagerPlaying.GPS_GoToInactive();
+            gameManagerPlaying.GPS_GoToInactive();
             m_target.SMG_GoToInactive();
         }
     }
