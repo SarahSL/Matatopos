@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Plane
   - Game
+  - Point
+  - Andy
   layers:
   - Default
   - TransparentFX

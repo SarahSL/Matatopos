@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class AndyAgent : MonoBehaviour
 {
-    public HelloARController principalARController;
-    public GameManagerPlaying gameManagerPlaying;
     public int id_pos; 
 
     private void Update()

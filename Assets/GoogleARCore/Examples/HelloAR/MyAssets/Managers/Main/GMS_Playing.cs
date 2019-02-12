@@ -11,7 +11,7 @@ public class GMS_Playing : GMS_ControllerState
     }
     public override void Exit()
     {
-
+        
     }
     public override void Update()
     {
